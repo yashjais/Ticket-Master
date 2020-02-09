@@ -1,0 +1,22 @@
+{
+  "name": "ticket-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev-server": "nodemon index.js",
+    "dev": "concurrently \"nodemon index.js\" \"cd client && npm start\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.0.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.5",
+    "nodemailer": "^6.4.2",
+    "validator": "^12.2.0"
+  }
+}
