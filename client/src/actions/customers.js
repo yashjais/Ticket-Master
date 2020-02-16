@@ -1,14 +1,18 @@
 import axios from '../config/axios'
 
-export default setCustomers = (user) => {
-    return { type: "SET_CUSTOMERS", payload: user}
+export const setCustomers = (users) => {
+    return { type: "SET_CUSTOMERS", payload: users}
 }
 
 
-export default startGetCustomers = () => {
+export const startGetCustomers = () => {
     return (dispatch) => {
         axios.get('/customers')
-            .then(users => console.log(users))
+            .then(response => {
+                const users = response.data
+                console.log(users)
+                dispatch(setCustomers(users))
+            })
             .catch(err => console.log(err))
     }
 }
