@@ -1,6 +1,4 @@
 const Ticket = require('../models/ticket')
-// const ticketEmail = require('../app/middlewares/ticketEmail')
-
 
 module.exports.list = (req, res) => {
     Ticket.find().populate('customer',['_id','name']).populate('department',['_id','name']).populate({path: 'employees', model: 'Employee'}) //.populate('employees', { path: 'employees._id', model: 'employees'}) // , { path: 'employees._id', model: 'employees'}) // .populate({ path : 'employees', populate: { path: 'employees._id' }})  // .populate('employees._id')  // .populate({path: 'employees', model: 'Employee'})  // .populate({ path : 'userId', populate : { path : 'reviewId' }}) // , model: 'Weapon' }
