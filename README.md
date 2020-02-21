@@ -1,4 +1,4 @@
-## Notes-Application
+## Ticket-Master
 
 Ticket Master is a ticketing Application, which provides an interface through which a user can generate tickets. A ticket is generated when a customer have a complain about a certain service, then that ticket can be assigned to a employer based on the department and a priority can be given based on the urgency of the matter.
 
